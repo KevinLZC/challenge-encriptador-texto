@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="public/diamod.png" type="image/icon type">
+  <link rel="stylesheet" href="style.css">
+  <title>Encriptador de texto</title>
+</head>
+
+<body>
+  <header>
+    <img src="public/logo.png" alt="Alura Latam Logo">
+  </header>
+  <main>
+    <textarea name="text" id="text" placeholder="Ingrese el texto aquí" wrap="hard" onkeyup="this.value = this.value.replace(/[A-ZÁÉÍÓÚáéíóúÜüÑñ]/g, '')"></textarea>
+    <div>
+      <div class="information">
+        <img src="public/exclamation.png" alt="Signo de exclamación">
+        <p>Solo letras minúsculas y sin acentos</p>
+      </div>
+      <div class="action_buttons">
+        <button id="encrypt" class="encrypt">Encriptar</button>
+        <button id="decrypt" class="decrypt">Desencriptar</button>
+      </div>
+    </div>
+  </main>
+  <aside> 
+    <div id="output" class="message_result">
+    </div>
+  </aside>
+</body>
+<script src="js/index.js"></script>
+</html>
